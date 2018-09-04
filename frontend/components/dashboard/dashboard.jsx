@@ -114,16 +114,12 @@ class Dashboard extends React.Component {
         });
       });
 
-      console.log("FILTERED COURSES", filteredCourses);
       this.setState({ courses: filteredCourses });
       this.setState({ quizzes: filteredQuizzes });
     }
-    console.log("state", this.state.filters);
   }
   
   render() {
-    console.log("PROPS: ", this.props);
-    console.log("STATE", this.state);
     return (
       <div className="dash">
         <h2>DASHBOARD</h2>

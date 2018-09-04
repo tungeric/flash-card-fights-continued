@@ -7,7 +7,6 @@ import { getUser } from '../../actions/user_actions';
 
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     user: state.session.currentUser,
     courses: state.entities.courses,

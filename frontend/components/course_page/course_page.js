@@ -12,7 +12,6 @@ class CoursePage extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.course_id);
     const id = Number(this.props.match.params.course_id);
     this.props.getCourse(id)
       .then(response => this.setState({ course: response.course }));
@@ -20,8 +19,6 @@ class CoursePage extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.match.params.course_id !== this.props.match.params.course_id) {
-      console.log("I'm here");
-      console.log(nextProps.match.params.course_id)
       const id = Number(nextProps.match.params.course_id);
       this.props.getCourse(id)
         .then(response => this.setState({course: response.course}));
@@ -35,11 +32,8 @@ class CoursePage extends React.Component {
   }
 
   render() {
-    console.log("STATE: ", this.state.course);
-    console.log("PROPS: ", this.props.course);
     const course = Object.values(this.props.course)[0]; //this.state.course;
     if (course) {
-      console.log("course quizzes array", "------");
       return (
         <div className="dash">
           <h2>{course.title}</h2>
@@ -49,7 +43,6 @@ class CoursePage extends React.Component {
               <ul>
                 {(course.quizzes) ? Object.values(course.quizzes).map((quiz, idx) => {
                   let quizCardClassName = `course-or-quiz-card-${idx % 4}`;
-                  console.log("QUIZ: ",quiz);
                   return (
                     <div>
                       <Link to={`/quiz/${quiz.id}/challenge`}>

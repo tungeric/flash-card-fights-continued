@@ -4,8 +4,6 @@ import { getUsers } from '../../actions/user_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("STATE: ", state);
-  console.log("PRasdfasdOPS: ", ownProps);
   return {
     user: state.session.user,
     classmates: state.entities.users,

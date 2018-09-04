@@ -18,10 +18,7 @@ class ChallengeIndexItem extends React.Component {
   }
 
   render() {
-    console.log("PROPS: ", this.props);
-    console.log("STATE: ", this.state);
     const challenge = this.props.challenge;
-    console.log("challenge", challenge);
     const quizUrl = `/quiz/${challenge.quiz.id}`
     return (
       <div className="no-underline">

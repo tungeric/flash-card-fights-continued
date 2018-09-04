@@ -15,7 +15,6 @@ const quizzesReducer = (state = {}, action) => {
     case RECEIVE_QUIZZES:
       return action.quizzes;
     case RECEIVE_QUIZ:
-      console.log(action);
       const newQuiz = { [action.quiz.id]: action.quiz };
       return merge({}, state, newQuiz);
     default:

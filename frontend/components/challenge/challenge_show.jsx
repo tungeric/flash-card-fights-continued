@@ -19,7 +19,6 @@ class ChallengeShow extends React.Component {
   }
 
   render() {
-    console.log("challenge show props: ", this.props);
     return (
       <div className="challenge">
         <h1>CHALLENGE YER MATES</h1>

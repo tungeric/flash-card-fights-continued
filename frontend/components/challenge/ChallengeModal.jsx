@@ -68,7 +68,6 @@ class ChallengeModal extends React.Component {
       text = "Challenge a Friend";
       classN = "challenge-button";
     }
-    console.log("modal props: ", this.props)
     return (
       <div>
         <a onClick={this.openModal} className={classN}>{text}</a>

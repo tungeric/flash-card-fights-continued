@@ -6,7 +6,6 @@ class QuestionAnswer extends React.Component {
   }
 
   render() {
-    console.log("I'M AN ANSWER: ", this.props.answer);
     if (this.props.answer.is_correct) {
       return(
         <div className="indiv-question">

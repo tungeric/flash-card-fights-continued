@@ -8,7 +8,6 @@ class User extends React.Component {
   }
 
   handleClick(e) {
-    console.log("user show props: ", this.props);
     const challenge = { challenge: 
       {
         challenger_id: this.props.currentUser.id,
@@ -17,7 +16,6 @@ class User extends React.Component {
       }
     };
     e.preventDefault();
-    // console.log("clicked:", this.props.getSpot);
     this.props.createChallenge(challenge);
     this.props.closeModal();
   }

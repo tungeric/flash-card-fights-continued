@@ -16,7 +16,6 @@ class Greeting extends React.Component {
   signUpClick(e) {
     e.preventDefault();
     const signup = document.getElementsByClassName("signup-button");
-    console.log(signup);
     signup[0].click();
   }
 

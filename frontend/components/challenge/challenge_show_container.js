@@ -12,7 +12,6 @@ import { selectQuiz } from "../../reducers/selectors";
 
 
 const mapStateToProps = (state, props) => {
-  console.log("show container props: ", props);
    const quizId = parseInt(props.match.params.quiz_id);
    const quiz = selectQuiz(state.entities, props.match.params.quiz_id);
   //  const currentUser = state.session.currentUser;

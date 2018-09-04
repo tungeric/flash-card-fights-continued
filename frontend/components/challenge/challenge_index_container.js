@@ -4,7 +4,6 @@ import { getChallenge, getChallenges, updateChallenge, deleteChallenge, createCh
 
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     user: state.session.currentUser,
     challenges: state.entities.challenges

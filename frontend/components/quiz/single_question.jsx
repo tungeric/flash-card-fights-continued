@@ -14,7 +14,6 @@ class SingleQuestion extends React.Component {
   }
 
   componentWillMount() {
-    console.log('question number is ', this.props.questionNum);
   }
 
   handleCorrectSubmit() {
@@ -53,7 +52,6 @@ class SingleQuestion extends React.Component {
 
   renderAnswers() {
     let answers = Object.values(this.props.question.answers);
-    console.log(answers);
     return(
       <div className="answers">
         { answers.map((answer, idx) => <QuestionAnswer key={idx}

@@ -4,8 +4,6 @@ import { getCourse } from '../../actions/course_actions';
 
 
 const mapStateToProps = (state, props) => {
-  // console.log("STATE: ", state);
-  // console.log("PROPS: ", props);
   return {
     user: state.session.user,
     course: state.entities.courses

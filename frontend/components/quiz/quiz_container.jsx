@@ -5,10 +5,7 @@ import { createQuestionAttempt } from '../../actions/question_attempt_actions';
 import { createQuizAttempt } from '../../actions/quiz_attempt_actions';
 import { updateChallenge } from '../../actions/challenge_actions';
 
-// console.log("get Quiz: ", getQuiz);
-
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
   return{
     quiz: state.entities.quizAccoutrements.quizzes,
     currentUser: state.session.currentUser.id

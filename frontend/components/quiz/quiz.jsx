@@ -4,7 +4,6 @@ import SingleQuestion from './single_question';
 class Quiz extends React.Component {
   constructor(props) {
     super(props);
-    console.log("props: ", this.props)
     this.state = {
       // keys: Object.values(this.props.quiz.questions),
       questions: [],
@@ -45,7 +44,6 @@ class Quiz extends React.Component {
 
   renderQuestion() {
     const questions = this.state.questions;
-    console.log("QUESTIONS: ", questions);
     if (questions.length !== 0) {
       return (
         <SingleQuestion question={questions[this.state.current]}
@@ -61,7 +59,6 @@ class Quiz extends React.Component {
 
   render() {
     const quiz = Object.values(this.props.quiz)[0];
-    console.log("QUIZ: ", quiz);
     if (quiz) {
       if (this.state.current !== this.state.questions.length) {
         return (

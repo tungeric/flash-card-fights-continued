@@ -17,8 +17,6 @@ class ChallengeIndex extends React.Component {
   }
 
   render() {
-    console.log("PROPS: ", this.props);
-    console.log("STATE: ", this.state);
     const challenges = this.state.challenges;
     return(
       <div>
