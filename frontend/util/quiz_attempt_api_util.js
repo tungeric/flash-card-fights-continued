@@ -8,7 +8,7 @@ export const fetchQuizAttempt = (quizId, id) =>
 export const createQuizAttempt = (quiz_attempt) =>
   $.ajax({
     method: "POST",
-    url: `api/quizzes/${quiz_attempt.quizId}//quiz_attempts`,
+    url: `api/quizzes/${quiz_attempt.quizId}/quiz_attempts`,
     data: {quiz_attempt}
   });
 

@@ -60,10 +60,8 @@ class Quiz extends React.Component {
   }
 
   render() {
-    console.log('current is ', this.state.current);
-    console.log('questions length is ', this.state.questions.length);
-    console.log('quiz id is ', this.props.quiz.id);
     const quiz = Object.values(this.props.quiz)[0];
+    console.log("QUIZ: ", quiz);
     if (quiz) {
       if (this.state.current !== this.state.questions.length) {
         return (

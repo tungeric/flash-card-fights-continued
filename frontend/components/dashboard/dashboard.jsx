@@ -13,7 +13,8 @@ class Dashboard extends React.Component {
       allQuizzes: {},
       courses: {},
       filters: {},
-      quizzes: {}
+      quizzes: {},
+      user: {}
     };
   }
 
@@ -21,10 +22,11 @@ class Dashboard extends React.Component {
     this.props.getCourses();
     this.props.getSubjects();
     this.props.getQuizzes();
+    this.props.getUser(this.props.currentUser.id);
   }
 
   componentWillReceiveProps(props) {
-    this.setState({ allCourses: props.courses, courses: props.courses, allQuizzes: props.quizzes.quizzes, quizzes: props.quizzes.quizzes });
+    this.setState({ allCourses: props.courses, courses: props.courses, allQuizzes: props.quizzes.quizzes, quizzes: props.quizzes.quizzes, user: props.user });
   }
 
   componentWillUnmount() {
@@ -120,6 +122,7 @@ class Dashboard extends React.Component {
   }
   
   render() {
+    console.log("PROPS: ", this.props);
     console.log("STATE", this.state);
     return (
       <div className="dash">
